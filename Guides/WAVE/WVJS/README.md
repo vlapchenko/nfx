@@ -19,8 +19,8 @@ Implementation of unit testing concept.
 Record model is in the WAVE.RecordModel namespace.
 
 ### Classes
-* [Record](Record.md)
-* [Field](Field.md)
-* [RecordView](RecordView.md)
+##### [Record](Record.md)
+##### [Field](Field.md)
+##### [RecordView](RecordView.md)
 
 

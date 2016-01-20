@@ -104,10 +104,10 @@ Changes point coordinates.
 Returns point as polar point relative to the specified center.
 ##### toString(): string
 Returns coordinates in string like: `(10 , 12)`.
-##### x(): float
-Returns X coordinate.
-##### y(): float
-Returns Y coordinate.
+##### x(float val): float
+Sets/returns X coordinate.
+##### y(float val): float
+Sets/returns Y coordinate.
 
 ### PolarPoint
 Represents point with polar coordinates.
@@ -115,10 +115,42 @@ Represents point with polar coordinates.
 Constructor.
 ##### isEqual(PolarPoint p): bool
 Determines whether the two points contain equivalent coordinates.
-##### radius()
-Returns radius of point.
-##### theta()
-Returns angle theta of point.
-
+##### radius(float val): float
+Sets/returns radius of point.
+##### theta(float val): float
+Sets/returns angle theta of point.
+##### toPoint(): Point
+Returns polar point as simple Cartesian (x,y) point.
+##### toString(): string
+Returns coordinates in string like: `(1 , 45°)`.
 
 ### Rectangle
+Represents a rectangle.
+##### Rectangle(Point tlCorner, Point brCorner)
+Constructor.
+##### bottom(): float
+Returns bottom-most edge coordinate.
+##### bottomRight(): Point
+Returns bottom right corner point per natural axis orientation when X increases from left to right, and Y increases from top to bottom.
+##### centerPoint(): Point
+Returns center point.
+##### contains(Point p): bool
+Tests if point lies within this rectangle.
+##### corner1(Point val): Point
+Sets/returns top left corner of rectangle.
+##### corner2(Point val): Point
+Sets/returns bottom right corner of rectangle.
+##### height(): float
+Returns rectangle height.
+##### left(): float
+Returns left-most edge coordinate.
+##### right(): float
+Returns right-most edge coordinate.
+##### square(): float
+Returns rectangle square.
+##### top(): float
+Returns top-most edge coordinate.
+##### topLeft(): Point
+Returns top left corner point per natural axis orientation when X increases from left to right, and Y increases from top to bottom.
+##### width(): float
+Returns rectangle width.
