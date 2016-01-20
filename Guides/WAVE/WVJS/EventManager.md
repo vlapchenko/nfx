@@ -1,5 +1,5 @@
-# WAVE.EventManager mixin
-It's mixin that implements the event-handler mechanism and can be added to any class.
+# WAVE.EventManager
+Mixin that implements the event-handler mechanism and can be added to any class.
 
 ##### eventInvocationSuspendCount: 0
 Increase to disable event firing for all events, decrease to enable, events are enabled again when value is <=0. This property is useful for batch updates to suppress many event firings that are not needed.

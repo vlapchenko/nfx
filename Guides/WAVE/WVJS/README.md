@@ -8,11 +8,11 @@ Java Script Client Library
 #### [String functions](StringFunctions.md)
 
 ## Sub-libraries and mixins
-### [WAVE.Geometry](geometry.md)
+#### [WAVE.Geometry](geometry.md)
 Contains a large number of functions to work with geometry.
-### [WAVE.EventManager](EventManager.md)
+#### [WAVE.EventManager](EventManager.md)
 Mixin that implements the event-handler mechanism and can be added to any class.
-### [WAVE.UTest](UTest.md)
+#### [WAVE.UTest](UTest.md)
 Implementation of unit testing concept.
 
 ## Record Model
