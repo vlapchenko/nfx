@@ -1,4 +1,4 @@
-# UTest Class
+# WAVE.UTest
 Static class which implements unit testing concept.
 
 ##### run(string area, string name, function fn)

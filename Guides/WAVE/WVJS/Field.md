@@ -1,5 +1,5 @@
 # Field Class
-Record consists of Fields and Field represents a FieldDef from server-side NFX.DataAccess.CRUD.Schema on the client side along with view model/controller.
+Record consists of fields and Field represents a FieldDef from server-side NFX.DataAccess.CRUD.Schema on the client side along with view model/controller.
 
 ## Field()
 Constructor. Initializes a new instance using string field definition and value.

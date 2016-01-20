@@ -1,4 +1,4 @@
-# EventManager Mixin
+# WAVE.EventManager mixin
 It's mixin that implements the event-handler mechanism and can be added to any class.
 
 ##### eventInvocationSuspendCount: 0

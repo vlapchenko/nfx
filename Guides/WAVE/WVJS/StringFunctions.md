@@ -110,3 +110,21 @@ Set cookie as `name = escape(value) + "; path=/"`.
 
 ##### deleteCookie(string name)
 Set expires as -1.
+
+##### Checking types
+Returns true if `tp` is in:
+* **isObjectType(tp)** - ["object", "json", "map", "array"]
+* **isIntType(tp)** - ["int", "integer"]
+* **isRealType(tp)** - ["float", "real", "double", "money"]
+* **isBoolType(tp)** - ["bool", "boolean", "logical"]
+* **isStringType(tp)** - ["str", "string", "char[]", "char", "varchar", "text"]
+* **isDateType(tp)** - ["date", "datetime", "time", "timestamp"]
+
+##### convertScalarType(bool nullable, scalar value, string type, scalar dflt)
+Converts scalar value into the specified type:
+```js
+var v;
+v = convertScalarType(false, 13, "string", "<unconvertible>"); // v = '13'
+v = convertScalarType(true, "13", "int");       // v = 13
+v = convertScalarType(false, "abc", "int", 10); // v = 10
+```
