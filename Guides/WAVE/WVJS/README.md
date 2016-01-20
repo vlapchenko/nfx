@@ -51,6 +51,13 @@ object.about = WAVE.overrideFun(object.about, function(){ return this.baseFuncti
 ##### propStrAsObject(object obj, string prop)
 Checks object property for string value and if it is then converts it to object (map).
 Does nothing if prop does not exist, is null or not a string value.
+```js
+var o1 = {a: 1, b: '{"c": "yes", "d": "no"}'};
+// WAVE.isObject(o1.b)) = false
+
+WAVE.propStrAsObject(o1, "b");
+// WAVE.isObject(o1.b)) = true
+```
 
     
 ### String functions
@@ -178,34 +185,24 @@ Returns true if `tp` is in:
 ##### convertScalarType(bool nullable, value, string type, dflt)
 Converts scalar value into the specified type:
 ```js
-convertScalarType(false, 13, "string", "<unconvertible>");
+var v;
+v = convertScalarType(false, 13, "string", "<unconvertible>"); // v = '13'
+v = convertScalarType(true, "13", "int");       // v = 13
+v = convertScalarType(false, "abc", "int", 10); // v = 10
 ```
 
 
-## Event manager mixin
-Implementation of event-handler mechanism that can be added to any class.
-For examples of using look at [Record](Record/readme.md) class description. 
+### [WAVE.EventManager](EventManager.md) mixin implements the event-handler mechanism and can be added to any class.
 
-##### eventInvocationSuspendCount: 0
-Increase to disable event firing for all events, decrease to enable, events are enabled again when value is <=0. This property is useful for batch updates to suppress many event firings that are not needed.
-
-##### eventBind(evtName, func)
-Binds a function to the named event handler.
-
-##### eventUnbind(evtName, func)
-Un-Binds a function from the named event handler.
-
-##### eventClear(evtName)
-Clears all functions from the named event handler.
-
-##### eventInvoke(evtName)
-Invokes all functions bound to the named event handler.
+### Unit testing concept is represented by [WAVE.UTest](UTest.md) static class.
 
 
 ## Record Model
 Record model is in the WAVE.RecordModel namespace.
 
 ### Classes
-* [Record](Record/readme.md)
-* [Field](Field/readme.md)
-* [RecordView](RecordView/readme.md)
+* [Record](Record.md)
+* [Field](Field.md)
+* [RecordView](RecordView.md)
+
+
