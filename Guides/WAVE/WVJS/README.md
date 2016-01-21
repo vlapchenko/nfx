@@ -8,12 +8,21 @@ Java Script Client Library
 #### [String functions](StringFunctions.md)
 
 ## Sub-libraries and mixins
-#### [WAVE.Geometry](geometry.md)
-Contains a large number of functions to work with geometry.
-#### [WAVE.EventManager](EventManager.md)
+#### [Geometry](geometry.md)
+Contains a large number of functions to work with geometry tasks.
+
+#### [EventManager](EventManager.md)
 Mixin that implements the event-handler mechanism and can be added to any class.
-#### [WAVE.UTest](UTest.md)
+
+#### SVG
+Provides working with SVG objects.
+
+#### [UTest](UTest.md)
 Implementation of unit testing concept.
+
+#### [Walkable](walkable.md)
+Mixin that enables function chaining that facilitates lazy evaluation via lambda-functions.
+
 
 ## Record Model
 Record model is in the WAVE.RecordModel namespace.
