@@ -61,7 +61,7 @@ Returns '`dt` as string in ISO format (e.g. "2012-01-22T12:30:15.120Z").
 Returns true if the case-insensitive trimmed string is in the set of values. Neither string nor set value may contain delimiter which is '|' by default: `strOneOf("car", ["car", "house", "tax"], ';')`. 
 
 ##### strNormalizeUSPhone(string s)
-Normalizes US phone string so it looks like (999) 999-9999x9999. If `s` starts with '+'(international phone, just return as-is).
+Normalizes US phone string so it looks like '(999) 999-9999x9999'. If `s` starts with '+'(international phone, just return as-is).
 
 ##### strTrim / strLTrim / strRTrim(string s): string
 Remove spaces from both/left/right sides of `s`.
@@ -93,11 +93,8 @@ Returns `dt` as string in "MM/DD/YYYY HH:MM:SS" format.
 ##### genRndKey(int keyLen, string alphabet): string
 Generates random key with specified length from the alphabet of possible characters: `rndKey(10,"abcdefzq2")`.
 
-##### genAutoincKey(string seq, int val)
+##### genAutoincKey(string seq, int val): int
 Returns next value of named sequence as result of: previous value (0 if function was not called for this sequence) + val.
-
-##### rnd(int min, int max): int
-Returns random number in the range of min/max where min=0 max=100 by default: `rnd(10,57); rnd(30);`
 
 ##### id(string s): object
 `document.getElementById(s)`.
@@ -123,7 +120,7 @@ WAVE.propStrAsObject(o1, "b");
 ```
 
 ##### Checking types
-Returns true if `tp` is in:
+Returns true if string `tp` is in:
 * **isObjectType(tp)** - ["object", "json", "map", "array"]
 * **isIntType(tp)** - ["int", "integer"]
 * **isRealType(tp)** - ["float", "real", "double", "money"]
@@ -139,3 +136,7 @@ v = convertScalarType(false, 13, "string", "<unconvertible>"); // v = '13'
 v = convertScalarType(true, "13", "int");       // v = 13
 v = convertScalarType(false, "abc", "int", 10); // v = 10
 ```
+
+##### rnd(int min, int max): int
+Returns random number in the range of min/max where min=0 max=100 by default: `rnd(10,57); rnd(30);`
+

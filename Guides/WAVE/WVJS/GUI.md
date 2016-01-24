@@ -11,8 +11,8 @@ Show/hide full page modal shadow. Class name = "wvCurtain".
 ```
 
 ## Dialog(init)
-Create instance of dialog window. "wvDialogBase", "wvDialogTitle", "wvDialogContent" classes must be defined for pretty view. This is "low-level" and more custom way to show dialog box. `showConfirmationDialog()` is more suitable for the most cases.
-init: {title: 'Title', content: 'html markup', cls: 'className', widthpct: 75, heightpct: 50, onShow: function(dlg){}, onClose: function(dlg, result){return true;}}
+Create instance of dialog window. "wvDialogBase", "wvDialogTitle", "wvDialogContent" classes must be defined for pretty view. This is "low-level" way to show dialog box. `showConfirmationDialog()` is more suitable for the most cases.  
+init: `{title: 'Title', content: 'html markup', cls: 'className', widthpct: 75, heightpct: 50, onShow: function(dlg){}, onClose: function(dlg, result){return true;}}`
 ```HTML
 <style>
 .wvDialogBase {
@@ -50,9 +50,7 @@ init: {title: 'Title', content: 'html markup', cls: 'className', widthpct: 75, h
         background: linear-gradient(to bottom, #45484d 0%,#000000 100%);
     }
 </style>
-
-...
-
+<body>
 <script>
 function showDialog(){
    var dlg = new WAVE.GUI.Dialog({
@@ -78,10 +76,9 @@ function showManyDialogs(){
                     });
 };                    
 </script>                    
-...
-
 <button onclick="showDialog()">Show Dialog</button>
 <button onclick="showManyDialogs()">Show Many</button>
+</body>
 ```
 
 ## IBox(container, object init)
@@ -123,6 +120,7 @@ var init =
     };
 
 var imageBox = new WAVE.GUI.IBox('divIBox', init);
+</script>
 </body>
 ```
 
@@ -232,7 +230,7 @@ Shows "toast" with message `msg` that disappears after `duration` in ms (defaule
 Displays a simple confirmation prompt dialog.
 ```HTML
 <style>
-/* styles is same with ones in Dialog() example*/
+/* style is the same with one in Dialog() example*/
 </style>
 ...
 <script>
