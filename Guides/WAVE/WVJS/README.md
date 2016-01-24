@@ -21,9 +21,6 @@ Mixin that implements the event-handler mechanism and can be added to any class.
 #### [RecordModel](RecordModel.md)
 Contains classes for MVVM pattern implementation.
 
-#### SVG
-Provides working with SVG objects.
-
 #### [UTest](UTest.md)
 Implementation of unit testing concept.
 
